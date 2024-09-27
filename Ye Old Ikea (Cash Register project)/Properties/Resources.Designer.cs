@@ -61,6 +61,24 @@ namespace Ye_Old_Ikea__Cash_Register_project_.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Cash_Register_Cha_Ching_SoundBible_com_184076484 {
+            get {
+                return ResourceManager.GetStream("Cash_Register_Cha_Ching_SoundBible_com_184076484", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Dot_Matrix_Printer_SoundBible_com_790333844 {
+            get {
+                return ResourceManager.GetStream("Dot_Matrix_Printer_SoundBible_com_790333844", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ikea_early_logo_1940s {

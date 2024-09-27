@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.numberOfShelvesLable = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -296,7 +297,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(683, 93);
+            this.label2.Size = new System.Drawing.Size(694, 93);
             this.label2.TabIndex = 24;
             this.label2.Text = "Ye Olden Ikea";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -316,8 +317,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(706, 592);
+            this.BackgroundImage = global::Ye_Old_Ikea__Cash_Register_project_.Properties.Resources.old_paper_texture_background_ucwuigpb57cktvxm;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(690, 592);
             this.Controls.Add(this.OutPutLable);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.printButton);
@@ -342,6 +344,7 @@
             this.Controls.Add(this.numberOfShelvesLable);
             this.Font = new System.Drawing.Font("Monotype Corsiva", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Ye Old Ikea";

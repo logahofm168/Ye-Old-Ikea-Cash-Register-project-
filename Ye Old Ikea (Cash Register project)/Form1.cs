@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Ye_Old_Ikea__Cash_Register_project_
 {
@@ -33,6 +34,8 @@ namespace Ye_Old_Ikea__Cash_Register_project_
 
         double tend = 0;
         double endPayment = 0;
+
+        SoundPlayer player = new SoundPlayer(Properties.Resources.Cash_Register_Cha_Ching_SoundBible_com_184076484);
 
         public Form1()
         {
@@ -78,6 +81,9 @@ namespace Ye_Old_Ikea__Cash_Register_project_
         {
             try
             {
+                // sound input 
+                player.Play();
+
                 //gets input
                 numOfShelves = Convert.ToInt32(shelvesInput.Text);
                 numOfTables = Convert.ToInt32(tableInput.Text);
@@ -111,6 +117,9 @@ namespace Ye_Old_Ikea__Cash_Register_project_
         {
             try
             {
+
+                player.Play();
+
                 tend = Convert.ToInt32(tenderedInput.Text);
 
                 endPayment = tend - totalPrice;
@@ -125,7 +134,10 @@ namespace Ye_Old_Ikea__Cash_Register_project_
 
         private void printButton_Click(object sender, EventArgs e)
         {
-            Refresh();
+            SoundPlayer player = new SoundPlayer(Properties.Resources.Dot_Matrix_Printer_SoundBible_com_790333844);
+            player.Play();
+
+            OutPutLable.Refresh();
             Thread.Sleep(400);
 
             OutPutLable.Text = $"                                YE OLD IKEA";
@@ -138,37 +150,21 @@ namespace Ye_Old_Ikea__Cash_Register_project_
             Refresh();
             Thread.Sleep(800);
 
-            OutPutLable.Text += $"\n Ye Olden Shelf  X{numOfShelves}                                   ${shelfPrice}";
+            OutPutLable.Text += $"\n Ye Olden Shelf  X{numOfShelves}                                     ${shelfPrice}";
+
+            player.Play();
 
             Refresh();
             Thread.Sleep(800);
 
-            OutPutLable.Text += $"\n Ye Olden Table  X{numOfTables}                                  ${tablePrice}";
+            OutPutLable.Text += $"\n Ye Olden Table  X{numOfTables}                                    ${tablePrice}";
 
             Refresh();
             Thread.Sleep(800);
 
-            OutPutLable.Text += $"\n Ye Olden Chair  X{numOfChairs}                                  ${chairPrice}";
+            OutPutLable.Text += $"\n Ye Olden Chair  X{numOfChairs}                                    ${chairPrice}";
 
-            Refresh();
-            Thread.Sleep(800);
-
-            OutPutLable.Text += $"\n            ....................................................             ";
-
-            Refresh();
-            Thread.Sleep(800);
-
-            OutPutLable.Text += $"\n Sudtotal                                                  {sudtotal.ToString("C")}";
-
-            Refresh();
-            Thread.Sleep(800);
-
-            OutPutLable.Text += $"\n Tax Amount                                           {taxAmount.ToString("C")}";
-
-            Refresh();
-            Thread.Sleep(800);
-
-            OutPutLable.Text += $"\n Total Price                                             {totalPrice.ToString("C")}";
+            player.Play();
 
             Refresh();
             Thread.Sleep(800);
@@ -178,19 +174,49 @@ namespace Ye_Old_Ikea__Cash_Register_project_
             Refresh();
             Thread.Sleep(800);
 
-            OutPutLable.Text += $"\n Tendered Used                                       ${tend}";
+            OutPutLable.Text += $"\n Sudtotal                                                   {sudtotal.ToString("C")}";
+
+            player.Play();
 
             Refresh();
             Thread.Sleep(800);
 
-            OutPutLable.Text += $"\n Change Back                                          {endPayment.ToString("C")}";
+            OutPutLable.Text += $"\n Tax Amount                                             {taxAmount.ToString("C")}";
+
+            Refresh();
+            Thread.Sleep(800);
+
+            OutPutLable.Text += $"\n Total Price                                               {totalPrice.ToString("C")}";
+
+            player.Play();
 
             Refresh();
             Thread.Sleep(800);
 
             OutPutLable.Text += $"\n            ....................................................             ";
+
+            Refresh();
+            Thread.Sleep(800);
+
+            OutPutLable.Text += $"\n Tendered Used                                        ${tend}";
+
+            player.Play();
+
+            Refresh();
+            Thread.Sleep(800);
+
+            OutPutLable.Text += $"\n Change Back                                            {endPayment.ToString("C")}";
+
+            Refresh();
+            Thread.Sleep(800);
+
+            OutPutLable.Text += $"\n            .........................................................             ";
+
+            player.Play();
 
             OutPutLable.Text += $"\n           Thank For Shoping At Ye Olden Ikea";
+
+            OutPutLable.Text += $"\n                       return in Thirty";
 
         }
     }
