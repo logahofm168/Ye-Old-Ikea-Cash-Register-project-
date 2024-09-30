@@ -42,41 +42,6 @@ namespace Ye_Old_Ikea__Cash_Register_project_
             InitializeComponent();
         }
 
-        private void yeTable_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tital_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void subtotalLable_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numberOfShelvesLable_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void calcuButton_Click(object sender, EventArgs e)
         {
             try
@@ -125,6 +90,8 @@ namespace Ye_Old_Ikea__Cash_Register_project_
                 endPayment = tend - totalPrice;
 
                 changeOutPut.Text = $"{endPayment.ToString("C")}";
+
+                printButton.Enabled = true;
             }
             catch
             {
@@ -134,6 +101,8 @@ namespace Ye_Old_Ikea__Cash_Register_project_
 
         private void printButton_Click(object sender, EventArgs e)
         {
+            printButton.Enabled = false;
+
             SoundPlayer player = new SoundPlayer(Properties.Resources.Dot_Matrix_Printer_SoundBible_com_790333844);
             player.Play();
 
@@ -214,10 +183,11 @@ namespace Ye_Old_Ikea__Cash_Register_project_
 
             player.Play();
 
-            OutPutLable.Text += $"\n           Thank For Shoping At Ye Olden Ikea";
+            OutPutLable.Text += $"\n              Thank For Shoping At Ye Olden Ikea";
 
-            OutPutLable.Text += $"\n                       return in Thirty";
+            OutPutLable.Text += $"\n               return in thirty daysto get a refund";
 
+           
         }
     }
 

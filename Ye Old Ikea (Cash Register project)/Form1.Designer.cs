@@ -67,7 +67,6 @@
             this.numberOfShelvesLable.TabIndex = 1;
             this.numberOfShelvesLable.Text = "Number of ye olden shelves";
             this.numberOfShelvesLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.numberOfShelvesLable.Click += new System.EventHandler(this.numberOfShelvesLable_Click);
             // 
             // contextMenuStrip1
             // 
@@ -94,7 +93,6 @@
             this.numberOfTableLable.TabIndex = 5;
             this.numberOfTableLable.Text = "Number of ye olden table";
             this.numberOfTableLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.numberOfTableLable.Click += new System.EventHandler(this.label1_Click);
             // 
             // numberOfChairsLable
             // 
@@ -107,7 +105,6 @@
             this.numberOfChairsLable.TabIndex = 6;
             this.numberOfChairsLable.Text = "Number of ye olden chairs";
             this.numberOfChairsLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.numberOfChairsLable.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // chairsInput
             // 
@@ -151,7 +148,6 @@
             this.sudtotalLable.TabIndex = 10;
             this.sudtotalLable.Text = "Sudtotal :";
             this.sudtotalLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.sudtotalLable.Click += new System.EventHandler(this.subtotalLable_Click);
             // 
             // totalPriceLable
             // 
@@ -198,7 +194,6 @@
             this.taxAmountOutPut.Size = new System.Drawing.Size(81, 22);
             this.taxAmountOutPut.TabIndex = 14;
             this.taxAmountOutPut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.taxAmountOutPut.Click += new System.EventHandler(this.label2_Click);
             // 
             // totalOutPut
             // 
@@ -236,6 +231,7 @@
             // 
             // changeButton
             // 
+            this.changeButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.changeButton.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.changeButton.Location = new System.Drawing.Point(26, 473);
@@ -243,7 +239,7 @@
             this.changeButton.Size = new System.Drawing.Size(278, 30);
             this.changeButton.TabIndex = 19;
             this.changeButton.Text = "Calculate change ";
-            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // tenderedInput
@@ -251,13 +247,13 @@
             this.tenderedInput.Location = new System.Drawing.Point(216, 439);
             this.tenderedInput.Multiline = true;
             this.tenderedInput.Name = "tenderedInput";
-            this.tenderedInput.Size = new System.Drawing.Size(79, 23);
+            this.tenderedInput.Size = new System.Drawing.Size(82, 23);
             this.tenderedInput.TabIndex = 20;
             this.tenderedInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // changeLable
             // 
-            this.changeLable.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.changeLable.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.changeLable.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeLable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.changeLable.Location = new System.Drawing.Point(31, 518);
@@ -269,25 +265,27 @@
             // 
             // changeOutPut
             // 
-            this.changeOutPut.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.changeOutPut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.changeOutPut.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeOutPut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.changeOutPut.Location = new System.Drawing.Point(216, 519);
             this.changeOutPut.Name = "changeOutPut";
-            this.changeOutPut.Size = new System.Drawing.Size(81, 22);
+            this.changeOutPut.Size = new System.Drawing.Size(78, 22);
             this.changeOutPut.TabIndex = 22;
             this.changeOutPut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // printButton
             // 
+            this.printButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.printButton.Enabled = false;
             this.printButton.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.printButton.Location = new System.Drawing.Point(35, 552);
+            this.printButton.Location = new System.Drawing.Point(29, 552);
             this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(257, 28);
+            this.printButton.Size = new System.Drawing.Size(275, 28);
             this.printButton.TabIndex = 23;
             this.printButton.Text = "Print Receipt";
-            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.UseVisualStyleBackColor = false;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // label2
@@ -307,7 +305,7 @@
             this.OutPutLable.BackColor = System.Drawing.Color.WhiteSmoke;
             this.OutPutLable.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutPutLable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OutPutLable.Location = new System.Drawing.Point(332, 105);
+            this.OutPutLable.Location = new System.Drawing.Point(328, 105);
             this.OutPutLable.Name = "OutPutLable";
             this.OutPutLable.Size = new System.Drawing.Size(351, 436);
             this.OutPutLable.TabIndex = 25;
@@ -317,8 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Ye_Old_Ikea__Cash_Register_project_.Properties.Resources.old_paper_texture_background_ucwuigpb57cktvxm;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage = global::Ye_Old_Ikea__Cash_Register_project_.Properties.Resources.ikea_early_logo_1940s;
             this.ClientSize = new System.Drawing.Size(690, 592);
             this.Controls.Add(this.OutPutLable);
             this.Controls.Add(this.label2);
